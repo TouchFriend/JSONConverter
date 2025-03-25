@@ -31,7 +31,7 @@ extension NSTextView {
     func setUpLineNumberView() {
         if let scrollView = enclosingScrollView {
             lineNumberView = LineNumberRulerView(textView: self)
-            
+            lineNumberView.clipsToBounds = true
             scrollView.hasVerticalRuler = true
             scrollView.rulersVisible = true
             scrollView.verticalRulerView = lineNumberView
